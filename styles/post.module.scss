@@ -1,0 +1,151 @@
+@import '_variables';
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid gray;
+  // border: 1px solid $border-color;
+  position: relative;
+  max-width: 700px;
+  min-width: 340px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .post_author {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5%;
+    margin-bottom: 5%;
+
+
+    .post_author_picture_container {
+      width: 15%;
+      height: 6%;
+    }
+
+    .post_author_picture {
+      max-width: 90%;
+      border-radius: 50%;
+    }
+
+    .post_author_name {
+      text-align: center;
+      margin-top: 5%;
+      font-size: 1.5em;
+      font-family: $mukta-font ;
+      // color: $purple-color;
+    }
+
+  }
+
+  .post_content {
+
+    position: relative;
+
+    .post_image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2%;
+    }
+  }
+
+  .post_details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 95%;
+    bottom: 0%;
+
+    .product_details {
+
+      h4 {
+        color: $product-name-color;
+        font-family: $Ubuntu-font;
+        font-size: 1.5em;
+      }
+
+      p {
+        color: $product-price-color;
+        text-align: left;
+        font-family: $Ubuntu-font;
+        font-size: 1.5em;
+      }
+    }
+
+
+
+
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      li {
+        font-size: 0.8rem;
+        color: $text-color;
+        margin: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 9999px;
+        background-color: $border-color;
+      }
+    }
+
+    .favorite_button {
+      cursor: pointer;
+      max-width: 10%;
+
+      .favorite_button_icon {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &:hover {
+        color: $secondary-color;
+      }
+
+      &.active {
+        color: $secondary-color;
+      }
+
+    }
+  }
+
+  .post_description {
+    font: $primary-color;
+
+    .likes {
+      color: $purple-color;
+    }
+
+    .post_description_text {}
+
+    .post_show_comments {
+      color: grey;
+    }
+  }
+}
+
+@media screen and (max-width: 400) {
+  .product_details {
+    .product_name {
+      font-size: 1em;
+    }
+
+    .product_price {
+      font-size: 1em;
+    }
+  }
+}
